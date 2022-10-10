@@ -1,0 +1,175 @@
+<div style="background-color: #ff7979;">
+    <div class="card-top container-fluid">
+        <div class="container d-flex">
+            <div class="item text-center">
+                <a routerLink="/allComponent" routerLinkActive="active">
+                    <img src="/assets/gift.jpg" alt="">
+                    <h6>All Products</h6>
+                </a>
+
+            </div>
+            <div class="item text-center">
+                <a>
+                    <img src="/assets/accesories.jpg" alt="">
+                    <h6>Accesories</h6>
+                </a>
+
+            </div>
+            <div class="item text-center ">
+                <a>
+                    <img src="/assets/mobile.jpg" alt="">
+                    <h6>Mobiles</h6>
+                </a>
+
+            </div>
+            <div class="item text-center">
+                <a>
+                    <img src="/assets/jewellwey.jpg" alt="">
+                    <h6>Jewellery</h6>
+                </a>
+
+            </div>
+        </div><hr>
+    </div>
+
+    <div style="width: 200px; height:100%;position:absolute; ; align-items:center"
+        class="nav sticky flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+
+
+
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+            <a class="dropdown-item" href="#">All Filter</a>
+            <a class="dropdown-item" href="#">Category</a>
+            <a class="dropdown-item" href="#">Sub Category</a>
+            <a class="dropdown-item" href="#">price</a>
+        </div>
+        <a style="display: flex; width:100% ;color: blue; height: 60px;align-items:center;justify-content: center;"
+            class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab"
+            aria-controls="v-pills-profile" aria-selected="false">All Filter</a>
+        <a style="display: flex; width:100% ;color: blue; height: 60px;align-items:center;justify-content: center;"
+            class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab"
+            aria-controls="v-pills-profile" aria-selected="false">Category</a>
+        <a style="display: flex; width:100% ;color: blue; height: 60px;align-items:center;justify-content: center;"
+            class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab"
+            aria-controls="v-pills-messages" aria-selected="false">Sub Category</a>
+        <a style="display: flex; width:100% ;color: blue; height: 60px;align-items:center;justify-content: center;"
+            class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab"
+            aria-controls="v-pills-settings" aria-selected="false">price</a>
+    </div>
+
+    <!-- <div style="margin-left:14rem ;" class="container">
+    <div class="row">
+        <ng-container *ngFor="let item of productsList">
+            <div class="card col-md-3">
+                <img src="{{item.image}}" alt="">
+                <h5 style="white-space: nowrap; overflow:hidden;text-overflow:ellipsis;max-width:100ch;">{{item.title}}</h5>
+                <p style="white-space: nowrap; overflow:hidden;text-overflow:ellipsis;max-width:100ch;">{{item.description}}</p>
+                <p><strong>price:</strong>${{item.price}}</p>
+                <button class="btn btn-primary" (click)="addToCart(item)">Add To Cart</button>    
+                </div>
+        </ng-container>
+        
+    </div>
+</div>  -->
+
+
+
+    <!-- <body>
+
+    
+
+<div class="wrapper">
+    <div class="cart-nav">
+        <div class="icon">
+            <i class="fas fa-shipping-fast"></i>
+            <span>cart</span>
+        </div>
+        <div class="item-numb">0</div>
+    </div>
+    <div class="card">
+        <div><img src="/assets/ear birds.webp" alt=""></div>        
+        <div class="content">
+            <div class="row">
+                <div class="details">
+                    <span>Ear Birds</span>
+                    <p>Truke Premium Ear Birds</p>
+                </div>
+                <div class="price">
+                    $30
+                </div>
+            </div>
+            <div class="button">
+                <button>Buy Now</button>
+                <button class="cart-btn" >Add to Cart</button>
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <img src="/assets/mobile.jpg" alt="">
+        <div class="content">
+            <div class="row">
+                <div class="details">
+                    <span>Mobile</span>
+                    <p>Mobile with 4gb ram 64 gb rom</p>
+                </div>
+                <div class="price">
+                    $60
+                </div>
+            </div>
+            <div class="button">
+                <button>Buy Now</button>
+                <button class="cart-btn">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <img src="/assets/jewellwey.jpg" alt="">
+        <div class="content">
+            <div class="row">
+                <div class="details">
+                    <span>Gold Necklace</span>
+                    <p>24 carat gold</p>
+                </div>
+                <div class="price">
+                    $100
+                </div>
+            </div>
+            <div class="button">
+                <button>Buy Now</button>
+                <button class="cart-btn">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+</div>
+</body> -->
+
+
+    <div class="container">
+
+        <div class="col-md-12 m-2 p-2"></div>
+        <div class="row d-flex">
+            <!-- *ngFor="let pro of productsList" -->
+            <div class="col-lg-4 p-2" *ngFor="let pro of productsList">
+
+                <div class="card ">
+                    <img src="{{pro.image}}" class="card-img-top" alt="...">
+                    <div class="content">
+                        <div class="row">
+                            <h3 class="card-title"
+                                style="white-space: nowrap; overflow:hidden;text-overflow:ellipsis;max-width:100ch;">
+                                {{pro.title}}</h3>
+                            <p class="card-text"
+                                style="white-space: nowrap; overflow:hidden;text-overflow:ellipsis;max-width:100ch;">
+                                {{pro.description}}</p>
+                            <p><strong>price:</strong>${{pro.price}}</p>
+                        </div>
+                        <button class="button2" (click)="addToCart(pro)">Add To Cart</button>
+                        <button class="button1" (click)="addToCart(pro)">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>

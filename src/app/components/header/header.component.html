@@ -1,0 +1,152 @@
+<div class="col sm-6 lg-12"></div> <div style="height: 60px;" class="navbar sticky-top bg-primary shadow-sm">
+        <div class="navbar-brand aligh-item-center d-flex">
+            <i style="font-size: 40px; color: white;" class="fas fa-shipping-fast">&nbsp;
+                </i>
+
+                <a style="font-size: 20px; color: rgb(255, 255, 255);" class="navbar-brand" href="#">Shpify</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+
+
+
+                <!-- <strong style="font-size: 30px; color: antiquewhite;">Flipkart</strong> -->
+            
+            
+            
+                 <div class="form-group my-2">
+                <input type="text" class="form-control" placeholder="search products">
+            </div>
+            <button class="fas fa-search search-icon"></button>
+            
+        </div>
+        <div class="col md-4">
+            <button  data-toggle="modal" data-target="#myModal" style="margin-right:20px ;" class="btn btn-primary" >
+            <i style="font-size:20px;">Login</i>
+        </button>
+        <button data-toggle="modal" data-target="#myModal1" style="margin-right:1rem ;" class="btn btn-primary" >
+            <i style="font-size:20px;">Registration</i>
+        </button>
+        <button style="font-size:20px;" class="btn btn-primary" data-toggle="modal" data-target="#myModal2">
+          Add Products
+        </button>
+        <button routerLink="cart" class="btn btn-primary">
+            <i style="font-size: 30px;" class="fas fa-cart-plus"></i>
+            <div style="font-size: 10px;" class="badge bg-danger">{{totalItem}}</div>
+        </button>
+    </div>
+    </div>
+
+    <!-- add product module -->
+   
+     <div id="myModal2" class="modal" tabindex="-1"> -->
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Add Product</h5>
+  
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+              <div class="form-group">
+                  <label for="exampleInputEmail1">Name Of Product</label>
+                  <input type="text" style="width: 400px;" class="form-control" id="Name Of Product" aria-describedby="emailHelp">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Description</label>
+                  <textarea style="width: 400px;" class="form-control" id="Description" aria-describedby="emailHelp"></textarea>
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Price</label>
+                  <input type="Number" style="width: 400px;" class="form-control" id="Price" aria-describedby="emailHelp">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Image</label>
+                  <input type="file" (change)="onFileSelect($event)" style="width: 400px;" class="form-control" id="form" aria-describedby="emailHelp">
+                </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Add Product</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!--Registration modal -->
+<div id="myModal1" class="modal" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Registration Form</h5>
+
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <div class="form-group">
+                <label for="exampleInputEmail1">Full Name</label>
+                <input type="text" style="width: 400px;" class="form-control" id="fullName" aria-describedby="emailHelp">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputEmail1">Email address</label>
+                <input type="email" style="width: 400px;" class="form-control" id="email1" aria-describedby="emailHelp">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputEmail1">Number</label>
+                <input type="Number" style="width: 400px;" class="form-control" id="number" aria-describedby="emailHelp">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputEmail1">password</label>
+                <input type="password" style="width: 400px;" class="form-control" id="password" aria-describedby="emailHelp">
+              </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Ragister</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Login MOdal -->
+  <div id="myModal" class="modal" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Login</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <form>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Email address</label>
+                  <input type="email" style="width: 400px;" class="form-control" id="Email1" aria-describedby="emailHelp">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Password</label>
+                  <input style="width: 400px;" type="password" class="form-control" id="exampleInputPassword1">
+                </div>
+                <div class="form-group form-check">
+                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                  <label class="form-check-label" for="exampleCheck1">Remember Me</label>
+                </div>
+               <div> <a href=""> Forget Password</a></div>
+              </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Login</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+
